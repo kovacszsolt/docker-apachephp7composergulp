@@ -4,7 +4,7 @@ RUN apt-get install -y git wget mc apt-transport-https lsb-release ca-certificat
 RUN wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg
 RUN echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" > /etc/apt/sources.list.d/php.list
 RUN apt-get -y update
-RUN apt-get install -y curl apache2 php7.1 php7.1-mysql php7.1-json php7.1-curl php7.1-gd php7.1-xml php7.1-mbstring
+RUN apt-get install -y curl apache2 php7.1 php7.1-mysql php7.1-json php7.1-curl php7.1-gd php7.1-xml php7.1-mbstring mysql-client
 ENV COMPOSER_ALLOW_SUPERUSER=1
 # install composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
