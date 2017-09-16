@@ -44,4 +44,4 @@ COPY files/index.html.default /apache/source/default/public/index.html
 
 #################
 # run apache2 service
-RUN /etc/init.d/apache2 start
+ENTRYPOINT service apache2 restart && /bin/bash
