@@ -1,6 +1,6 @@
 FROM debian:jessie
 RUN apt-get -y update
-RUN apt-get install -y git wget mc apt-transport-https lsb-release ca-certificates memcached
+RUN apt-get install -y git wget apt-transport-https lsb-release ca-certificates memcached
 RUN wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg
 RUN echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" > /etc/apt/sources.list.d/php.list
 RUN apt-get -y update
